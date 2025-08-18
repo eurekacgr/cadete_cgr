@@ -1,0 +1,77 @@
+body {
+    background-color: #0c0c1c;
+    color: #e0e0e0;
+    font-family: 'Consolas', 'Courier New', monospace;
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#game-container { position: relative; }
+#gameCanvas { background-color: #000; border: 2px solid #00ffaa; box-shadow: 0 0 15px #00ffaa; }
+#game-info { position: absolute; top: -40px; width: 100%; font-size: 1.2em; display: flex; justify-content: space-around; letter-spacing: 2px; }
+
+/* Estilos para Modales */
+.hidden { display: none !important; }
+
+#start-modal, #validation-modal, #game-over, #feedback-modal {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 20, 10, 0.9);
+    display: flex; justify-content: center; align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #0c0c1c;
+    border: 2px solid #00ffaa;
+    padding: 25px;
+    width: 90%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffaa;
+    text-align: center; /* Centrado para el modal de inicio */
+}
+
+/* Títulos y Subtítulos del Inicio */
+.game-title {
+    font-size: 3em;
+    color: #00ffaa;
+    text-shadow: 0 0 10px #00ffaa, 0 0 20px #fff;
+    margin: 0;
+}
+.game-subtitle {
+    font-size: 1.2em;
+    color: #aaa;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+/* Instrucciones en Grande */
+.instructions {
+    border: 1px dashed #555;
+    padding: 15px;
+    margin: 20px auto;
+    text-align: left;
+    width: 70%;
+}
+.instructions h3 { text-align: center; margin-top: 0; color: #00ffaa; }
+.instructions span { font-weight: bold; color: #fff; }
+
+#nickname-input {
+    display: block; width: 60%; margin: 20px auto 10px;
+    background-color: #333; color: #fff; border: 1px solid #00ffaa;
+    padding: 10px; text-align: center; font-size: 1.1em;
+}
+
+/* Feedback Modal */
+#feedback-title { font-size: 2em; color: #00ffaa; }
+#feedback-points { font-size: 1.5em; color: #fff; }
+
+/* (El resto de estilos se mantiene funcional) */
+button { background-color: #00ffaa; color: #0c0c1c; border: none; padding: 12px 25px; font-size: 1.1em; cursor: pointer; display: block; margin: 20px auto 0; transition: all 0.2s; }
+button:hover { background-color: #fff; box-shadow: 0 0 10px #fff; }
